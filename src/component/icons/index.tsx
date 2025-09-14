@@ -111,8 +111,8 @@ export const VideoIcon = (props: SVGProps<SVGSVGElement>) => {
 export const EnhancerIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="48"
-      height="48"
+      width="30"
+      height="30"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -166,8 +166,8 @@ export const EnhancerIcon = (props: SVGProps<SVGSVGElement>) => {
 export const RealTimeIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="48"
-      height="48"
+      width="30"
+      height="30"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -194,8 +194,8 @@ export const RealTimeIcon = (props: SVGProps<SVGSVGElement>) => {
 export const EditIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="48"
-      height="48"
+      width="30"
+      height="30"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -236,8 +236,8 @@ export const EditIcon = (props: SVGProps<SVGSVGElement>) => {
 export const AssetsIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="48"
-      height="48"
+      width="30"
+      height="30"
       viewBox="0 0 24 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
@@ -350,7 +350,7 @@ export const PenSunIcon = (props: SVGProps<SVGSVGElement>) => {
 export const UserIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      style={{ width: "128px", height: "128px", borderRadius: "50%" }}
+      style={{ width: "35px", height: "35px", borderRadius: "50%" }}
       width="128"
       height="128"
       viewBox="0 0 128 128"

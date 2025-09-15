@@ -347,15 +347,20 @@ export const PenSunIcon = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export const UserIcon = (props: SVGProps<SVGSVGElement>) => {
+export const UserIcon = ({
+  width = 35,
+  height = 35,
+  style,
+  ...props
+}: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      style={{ width: "35px", height: "35px", borderRadius: "50%" }}
-      width="128"
-      height="128"
+      width={width}
+      height={height}
       viewBox="0 0 128 128"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ borderRadius: "50%", ...style }}
       {...props}
     >
       <defs>
@@ -373,7 +378,14 @@ export const UserIcon = (props: SVGProps<SVGSVGElement>) => {
         >
           <feGaussianBlur stdDeviation="20" />
         </filter>
-        <filter id="blurRing" x="-50" y="-50" width="228" height="228" filterUnits="userSpaceOnUse">
+        <filter
+          id="blurRing"
+          x="-50"
+          y="-50"
+          width="228"
+          height="228"
+          filterUnits="userSpaceOnUse"
+        >
           <feGaussianBlur stdDeviation="16" />
         </filter>
         <radialGradient id="innerShadowRing" cx="0.5" cy="0.5" r="0.4">
@@ -399,8 +411,132 @@ export const UserIcon = (props: SVGProps<SVGSVGElement>) => {
         <g filter="url(#filter_blur)">
           <path d="M88 104 C120 23, 91 70, 65 6" fill="#0094FF" />
         </g>
-        <circle cx="64" cy="64" r="64" fill="url(#innerShadowRing)" filter="url(#blurRing)" />
+        <circle
+          cx="64"
+          cy="64"
+          r="64"
+          fill="url(#innerShadowRing)"
+          filter="url(#blurRing)"
+        />
       </g>
+    </svg>
+  );
+};
+
+export const CloseIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide-icon lucide lucide-x "
+    >
+      <path d="M18 6 6 18"></path>
+      <path d="m6 6 12 12"></path>
+    </svg>
+  );
+};
+
+export const SideIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+      className="h-5 w-5 iconify iconify--mynaui"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M9.367 2.25h5.266c1.092 0 1.958 0 2.655.057c.714.058 1.317.18 1.869.46a4.75 4.75 0 0 1 2.075 2.077c.281.55.403 1.154.461 1.868c.057.697.057 1.563.057 2.655v5.266c0 1.092 0 1.958-.057 2.655c-.058.714-.18 1.317-.46 1.869a4.75 4.75 0 0 1-2.076 2.075c-.552.281-1.155.403-1.869.461c-.697.057-1.563.057-2.655.057H9.367c-1.092 0-1.958 0-2.655-.057c-.714-.058-1.317-.18-1.868-.46a4.75 4.75 0 0 1-2.076-2.076c-.281-.552-.403-1.155-.461-1.869c-.057-.697-.057-1.563-.057-2.655V9.367c0-1.092 0-1.958.057-2.655c.058-.714.18-1.317.46-1.868a4.75 4.75 0 0 1 2.077-2.076c.55-.281 1.154-.403 1.868-.461c.697-.057 1.563-.057 2.655-.057M6.834 3.802c-.62.05-1.005.147-1.31.302a3.25 3.25 0 0 0-1.42 1.42c-.155.305-.251.69-.302 1.31c-.051.63-.052 1.434-.052 2.566v5.2c0 1.133 0 1.937.052 2.566c.05.62.147 1.005.302 1.31a3.25 3.25 0 0 0 1.42 1.42c.305.155.69.251 1.31.302c.392.032.851.044 1.416.05V3.752c-.565.005-1.024.017-1.416.049"
+      ></path>
+    </svg>
+  );
+};
+
+export const UpgradeIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="25"
+      viewBox="0 0 24 24"
+      className="inline-block"
+    >
+      <g fill="none" fillRule="evenodd">
+        <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"></path>
+        <path
+          fill="currentColor"
+          d="M17 3a2 2 0 0 1 1.492.668l.108.132l3.704 4.939a2 2 0 0 1-.012 2.416l-.108.13l-9.259 10.184a1.25 1.25 0 0 1-1.753.096l-.097-.096l-9.259-10.185a2 2 0 0 1-.215-2.407l.095-.138L5.4 3.8a2 2 0 0 1 1.43-.793L7 3zm-2.477 8H9.477L12 17.307zm5.217 0h-3.063l-2.406 6.015zM7.323 11H4.261l5.468 6.015zm5.059-6h-.764l-2 4h4.764zM17 5h-2.382l2 4H20zM9.382 5H7L4 9h3.382z"
+        ></path>
+      </g>
+    </svg>
+  );
+};
+
+export const ProIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className} // ✅ this lets Tailwind size it
+      {...props}
+    >
+      <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+      <path d="M5 3v4"></path>
+      <path d="M19 17v4"></path>
+      <path d="M3 5h4"></path>
+      <path d="M17 19h4"></path>
+    </svg>
+  );
+};
+
+export const SettingIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+      viewBox="0 0 24 24"
+      {...props}
+      className={`h-5.5 w-5.5 transition-transform duration-200 ease-out group-hover:scale-110 ${props.className ?? ""}`}
+    >
+      <g fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M14 3.269C14 2.568 13.432 2 12.731 2H11.27C10.568 2 10 2.568 10 3.269c0 .578-.396 1.074-.935 1.286q-.128.052-.253.106c-.531.23-1.162.16-1.572-.249a1.27 1.27 0 0 0-1.794 0L4.412 5.446a1.27 1.27 0 0 0 0 1.794c.41.41.48 1.04.248 1.572a8 8 0 0 0-.105.253c-.212.539-.708.935-1.286.935C2.568 10 2 10.568 2 11.269v1.462C2 13.432 2.568 14 3.269 14c.578 0 1.074.396 1.286.935q.052.128.105.253c.231.531.161 1.162-.248 1.572a1.27 1.27 0 0 0 0 1.794l1.034 1.034a1.27 1.27 0 0 0 1.794 0c.41-.41 1.04-.48 1.572-.249q.125.055.253.106c.539.212.935.708.935 1.286c0 .701.568 1.269 1.269 1.269h1.462c.701 0 1.269-.568 1.269-1.269c0-.578.396-1.074.935-1.287q.128-.05.253-.104c.531-.232 1.162-.161 1.571.248a1.27 1.27 0 0 0 1.795 0l1.034-1.034a1.27 1.27 0 0 0 0-1.794c-.41-.41-.48-1.04-.249-1.572q.055-.125.106-.253c.212-.539.708-.935 1.286-.935c.701 0 1.269-.568 1.269-1.269V11.27c0-.701-.568-1.269-1.269-1.269c-.578 0-1.074-.396-1.287-.935a8 8 0 0 0-.105-.253c-.23-.531-.16-1.162.249-1.572a1.27 1.27 0 0 0 0-1.794l-1.034-1.034a1.27 1.27 0 0 0-1.794 0c-.41.41-1.04.48-1.572.249a8 8 0 0 0-.253-.106C14.396 4.343 14 3.847 14 3.27Z"></path>
+        <path d="M16 12a4 4 0 1 1-8 0a4 4 0 0 1 8 0Z"></path>
+      </g>
+    </svg>
+  );
+};
+
+
+export const DimeIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="22"
+      height="22"
+      className="absolute inset-0 m-auto text-white"
+      viewBox="0 0 20 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.41872 17.2693L9.15255 21.7476C9.72424 22.0792 10.256 22.089 10.8474 21.7476L18.5813 17.2693C19.4977 16.7372 20 16.1948 20 14.739V6.78622C20 5.67189 19.5666 5.03911 18.7587 4.56699L11.7933 0.530823C10.5814 -0.182073 9.39888 -0.17179 8.20673 0.530823L1.24133 4.56742C0.433394 5.03911 0 5.67189 0 6.78665V14.739C0 16.1948 0.502333 16.7372 1.41872 17.2693ZM10 10.1104L2.49233 5.78243L8.90622 2.04658C9.6553 1.61516 10.3249 1.60531 11.0938 2.04658L17.5073 5.78243L10 10.1104ZM2.3452 15.8632C1.78318 15.5419 1.59612 15.2304 1.59612 14.6885V7.19793L9.17231 11.6064V19.8197L2.3452 15.8632ZM17.6552 15.8632L10.8277 19.8193V11.606L18.4039 7.19793V14.6893C18.4039 15.2313 18.2168 15.5427 17.6552 15.8641"
+        fill="currentColor"
+      ></path>
     </svg>
   );
 };

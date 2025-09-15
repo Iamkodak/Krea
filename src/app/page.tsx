@@ -13,7 +13,7 @@ import NavBar from "@/component/shared/NavBar";
 export default function page() {
   return (
     <div className="">
-      <NavBar/>
+
     </div>
   );
 }

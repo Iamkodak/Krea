@@ -44,7 +44,7 @@ export default function NavIcons() {
   return (
     <div className="">
       <div className="md:w-94 h-13 hidden md:block border md:bg-[#e7e7e7] md:dark:bg-black md:rounded-[15px]">
-        <ul className="flex flex-row pt-2 pl-2">
+        <ul className="flex flex-row py-1 pl-2">
           {navItems.map(({ href, Icon, active }) => {
             const isActive = active && pathname === href;
 
@@ -90,7 +90,7 @@ export default function NavIcons() {
         {/* Sidebar */}
         <div
           className={cn(
-            "fixed top-0 left-0 overflow-y-auto w-80 h-screen bg-white dark:bg-[#0A0A11] pt-6 px-3.5 transform transition-transform duration-300 ease-in-out z-50",
+            "fixed top-0 left-0 overflow-y-auto w-80 h-screen bg-white dark:bg-[#0A0A11] pt-6 px-3.5 pb-8 transform transition-transform duration-300 ease-in-out z-50",
             isMobileNavbarOpen ? "translate-x-0" : "-translate-x-[2000px]"
           )}
         >

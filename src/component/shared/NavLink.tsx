@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageIcon, UpgradeIcon, UserIcon } from '../icons';
+import { ImageIcon, SupportIcon, UpgradeIcon, UserIcon } from '../icons';
 import { ThemeToggle } from '@/app/themeToggle';
 import { Bell } from 'lucide-react';
 import Link from 'next/link';
@@ -17,8 +17,10 @@ export default function NavLink() {
 
             <div className="w-25 h-10 p-1.5 bg-[#efefef] dark:bg-black rounded-[10px]">
                 <Link href="/gallery" className='flex flex-row space-x-2'>
-                  <ImageIcon className='size-6' />
-                <p className="text-[16px] font-medium text-black dark:text-white">Gallery</p>
+                  <div className="mt-2.5">
+                    <SupportIcon className='size-8' />
+                  </div>
+                <p className="text-[16px] font-medium text-black dark:text-white">Support</p>
                 </Link>
             </div>
 
